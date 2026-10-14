@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dwi Amelia — Portfolio Informatika</title>
+<meta name="description" content="Portfolio Dwi Amelia, mahasiswa S1 Informatika Universitas Teknokrat Indonesia: pengembangan web, UI/UX, produk digital, desain kreatif, sertifikat, dan prestasi.">
+<meta name="keywords" content="Dwi Amelia, Portfolio, Informatika, Universitas Teknokrat Indonesia, Web Development, UI/UX, WAYESCAPE, TERRAEYE, NUSA">
+<meta name="author" content="Dwi Amelia">
+<meta property="og:title" content="Dwi Amelia — Portfolio Informatika">
+<meta property="og:description" content="Pengembangan web, UI/UX, dan produk digital dengan sense desain.">
+<meta property="og:image" content="assets/images/profile.png">
+<meta property="og:url" content="[ADD YOUR LINK]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!--
+ASSET CHECKLIST
+PROFILE       assets/images/profile.png (PNG transparan)
+ABOUT         assets/images/about.png
+PROJECTS      assets/projects/wayescape.jpg, cheesholic.jpg, terraeye.jpg, sahabat-remaja.jpg, nusa.jpg, ram-simulation.jpg, portfolio.jpg
+CERTIFICATES  assets/certificates/certificate-01.jpg ... certificate-10.jpg
+ACTIVITIES    assets/images/activity-01.jpg, activity-02.jpg, activity-03.jpg
+MUSIC         assets/music/portfolio-music.mp3
+DOCUMENT      assets/documents/cv.pdf
+-->
+<style>
+:root{--m:#4A0707;--m2:#300303;--cr:#F2EEDB;--bg:#E8E1CA;--ow:#FAF8EF;--k:#111;--serif:'Playfair Display',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--pad:clamp(56px,7vw,96px);--soon:"GAMBAR SEGERA HADIR";--addimg:"[TAMBAH FOTO ANDA]"}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+body{font:400 16px/1.6 var(--sans);background:var(--cr);color:var(--k);overflow-x:hidden}
+a{color:inherit;text-decoration:none}ul{list-style:none}img{display:block;max-width:100%}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,3.5vw,48px)}
+.g{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,2vw,28px)}
+section{padding:var(--pad) 0}
+.dark{background:var(--m);color:var(--cr)}.deep{background:var(--m2);color:var(--cr)}.beige{background:var(--bg)}
+.meta{font:600 11.5px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.mut{opacity:.7;font-size:13.5px}
+h2{font:700 clamp(32px,4vw,56px)/1.05 var(--serif);letter-spacing:-.01em}
+h2 i{font-weight:500}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid currentColor;padding-top:14px;margin-bottom:clamp(24px,3.5vw,44px)}
+main{transition:opacity .15s}body.sw main,body.sw header nav{opacity:0}
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:var(--m2);color:var(--cr);border-bottom:1px solid rgba(242,238,219,.2)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;height:52px}
+.logo{font:700 18px var(--serif);white-space:nowrap}
+nav{transition:opacity .15s}
+nav ul{display:flex;gap:clamp(10px,1.3vw,20px)}nav a{font:600 10.5px var(--sans);letter-spacing:.08em;text-transform:uppercase;opacity:.75;padding:6px 0;border-bottom:1px solid transparent;white-space:nowrap}
+nav a:hover,nav a.on{opacity:1;border-color:var(--cr)}
+.rt{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid var(--cr)}
+.lang button{background:none;border:0;color:var(--cr);font:700 11px var(--sans);letter-spacing:.1em;padding:5px 9px;cursor:pointer;transition:.2s}
+.lang button+button{border-left:1px solid var(--cr)}
+.lang button[aria-pressed=true]{background:var(--cr);color:var(--m2)}
+.lang button:not([aria-pressed=true]):hover{background:rgba(242,238,219,.15)}
+#tg{display:none;background:none;border:1px solid var(--cr);color:var(--cr);padding:5px 10px;font:600 11px var(--sans);letter-spacing:.1em;cursor:pointer}
+/* HERO */
+#hero{background:var(--m);color:var(--cr);padding:0;overflow:hidden}
+.stage{position:relative;height:clamp(520px,80vh,720px);display:grid;grid-template-rows:auto 1fr auto}
+.top,.bot{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(242,238,219,.3);position:relative;z-index:5}
+.bot{border:0;border-top:1px solid rgba(242,238,219,.3);align-items:center}
+.nm{position:absolute;left:0;right:0;top:9%;text-align:center;font:700 clamp(44px,8.5vw,96px)/.95 var(--serif);letter-spacing:-.02em;text-transform:uppercase;white-space:nowrap}
+.rl{position:absolute;left:0;right:0;top:calc(9% + clamp(48px,8.5vw,92px));text-align:center;font:italic 500 clamp(18px,2.4vw,30px) var(--serif);color:var(--bg)}
+.ph-c{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:76%;z-index:3;display:flex;align-items:flex-end}
+.ph-c img{height:100%;width:auto;max-width:92vw;object-fit:contain}
+.ph-c.noimg img{display:none}.ph-c.noimg::after{content:var(--addimg);font:600 11px var(--sans);letter-spacing:.1em;padding-bottom:40px;white-space:nowrap}
+.fr{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(34vw,340px);height:66%;border:1px solid rgba(242,238,219,.45);z-index:1}
+.sd{position:absolute;bottom:14%;z-index:4;max-width:230px;font-size:14px}
+.sd.l{left:0}.sd.r{right:0;text-align:right}
+.sd b{display:block;font:600 11.5px var(--sans);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;opacity:.8}
+.btn{display:inline-block;padding:9px 18px;border:1px solid var(--cr);font:600 11.5px var(--sans);letter-spacing:.1em;text-transform:uppercase;transition:.3s;background:none;color:inherit;cursor:pointer}
+.btn:hover{background:var(--cr);color:var(--m)}.btn.f{background:var(--cr);color:var(--m)}.btn.f:hover{background:transparent;color:var(--cr)}
+/* ABOUT */
+.ab-l{grid-column:1/4}.ab-c{grid-column:4/9}.ab-r{grid-column:9/13}
+.ab-c .lead{font:500 clamp(20px,2.2vw,28px)/1.35 var(--serif);margin-bottom:14px}
+.ab-c p{margin-bottom:10px}
+.kv div{padding:10px 0;border-bottom:1px solid rgba(17,17,17,.25)}.kv div:first-child{border-top:1px solid var(--k)}.kv p{font-size:14.5px}
+.abimg{aspect-ratio:4/5}
+.ph{position:relative;overflow:hidden;background:var(--m)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph.miss img{display:none}
+.ph.miss::after{content:var(--soon);position:absolute;inset:8px;display:grid;place-items:center;text-align:center;border:1px solid rgba(242,238,219,.35);color:var(--cr);font:600 11px var(--sans);letter-spacing:.14em}
+/* TIMELINE */
+.tl li{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,2vw,28px);padding:16px 0;border-top:1px solid currentColor}
+.tl li:last-child{border-bottom:1px solid currentColor}
+.tl .d{grid-column:1/4}.tl .t{grid-column:4/13}
+.tl h3{font:700 clamp(20px,2.4vw,28px)/1.2 var(--serif)}.tl p{max-width:70ch;font-size:15px;margin-top:6px}
+.tl .t .meta{display:block;opacity:.65;margin-bottom:2px}
+/* SKILLS */
+.sk{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--k);border-left:1px solid var(--k)}
+.sk div{padding:16px;border-right:1px solid var(--k);border-bottom:1px solid var(--k)}
+.sk h3{font:700 20px/1.1 var(--serif);margin:4px 0 12px}
+.sk li{font-size:14.5px;padding:3px 0;border-bottom:1px dotted rgba(17,17,17,.3)}
+.sk .hl{background:var(--m);color:var(--cr)}.sk .hl li{border-color:rgba(242,238,219,.35)}
+/* PROJECTS */
+.pj{display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--k);padding-top:12px;transition:border-color .3s}
+.pj:hover{border-color:var(--m);border-top-width:3px;padding-top:10px}
+.pj .ph{aspect-ratio:16/10}.pj .ph img{transition:transform .4s}.pj:hover .ph img{transform:scale(1.04) translateY(-2px)}
+.pj .mt{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.pj h3{font:700 clamp(24px,2.6vw,34px)/1.1 var(--serif);transition:color .3s;display:flex;justify-content:space-between;align-items:baseline}
+.pj h3 span{opacity:0;transform:translate(-6px,4px);transition:.3s;font-size:.8em}
+.pj:hover h3{color:var(--m)}.pj:hover h3 span{opacity:1;transform:none}
+.pj p{font-size:15px;max-width:62ch}
+.tags{display:flex;flex-wrap:wrap;gap:2px 12px;font-size:12.5px;opacity:.75}
+.lk{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:auto;padding-top:6px}
+.project-link{font:700 11.5px var(--sans);letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:2px;transition:.3s}
+.project-link:hover{color:var(--m);padding-right:6px}
+.project-link.empty{opacity:.55}
+/* ACH */
+.ac{display:grid;grid-template-columns:90px 1fr auto;gap:clamp(14px,2.4vw,32px);align-items:center;padding:16px 0;border-top:1px solid rgba(242,238,219,.4)}
+.ac:last-child{border-bottom:1px solid rgba(242,238,219,.4)}
+.ac .n{font:700 clamp(48px,6vw,80px)/.9 var(--serif);color:var(--bg)}
+.ac h3{font:700 clamp(20px,2.4vw,28px)/1.2 var(--serif)}.ac p{font-size:14.5px;opacity:.85;max-width:70ch;margin-top:4px}
+/* CERTS / ACT */
+.c3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,28px)}
+.ce{background:none;border:0;text-align:left;font:inherit;color:inherit;cursor:pointer;display:block;width:100%}
+.ce .ph{aspect-ratio:4/3;border:5px solid var(--ow);transition:transform .4s}.ce:hover .ph{transform:translateY(-3px)}
+.ce .meta{display:block;margin-top:8px;opacity:.7}.ce .tt{display:block;font:600 17px/1.3 var(--serif)}
+.act .ph{aspect-ratio:4/3}.act figure:nth-child(2){margin-top:28px}
+.act figcaption{margin-top:6px}
+/* CONTACT */
+.cta{font:700 clamp(36px,5.5vw,76px)/1 var(--serif);letter-spacing:-.02em;max-width:14ch}.cta i{font-weight:500;color:var(--bg)}
+.ct{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--cr);margin-top:28px}
+.ct a{padding:14px 12px 14px 0;border-bottom:1px solid rgba(242,238,219,.3);display:block;overflow-wrap:anywhere;font:600 16px var(--serif)}.ct a:hover{text-decoration:underline}
+footer{background:var(--k);color:var(--cr);padding:22px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:flex-end}
+footer b{font:700 22px var(--serif)}
+/* MUSIC */
+#mu{position:fixed;left:14px;bottom:14px;z-index:60;background:var(--m2);color:var(--cr);border:1px solid var(--cr);padding:8px 14px;font:600 11px var(--sans);letter-spacing:.1em;cursor:pointer;text-transform:uppercase}
+#mu:hover{background:var(--cr);color:var(--m2)}
+/* LIGHTBOX */
+#lb{position:fixed;inset:0;background:rgba(48,3,3,.96);z-index:100;display:none;place-items:center;padding:20px;color:var(--cr)}
+#lb.on{display:grid}#lb figure{max-width:960px;width:100%;text-align:center}
+#lb img{max-height:74vh;margin:0 auto;border:5px solid var(--ow)}
+#lb .x{position:absolute;top:14px;right:16px}
+#lb .nv{display:flex;justify-content:center;gap:10px;margin-top:12px}
+#lbm{display:none;padding:80px 20px;border:1px solid var(--cr)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+@media(max-width:1120px){
+ #tg{display:block}nav ul{display:none;position:absolute;top:52px;left:0;right:0;flex-direction:column;background:var(--m2);padding:16px 20px;gap:12px}nav ul.open{display:flex}nav a{font-size:13px}
+}
+@media(max-width:1024px){.sk{grid-template-columns:repeat(3,1fr)}.c3{grid-template-columns:repeat(2,1fr)}.ab-l{grid-column:1/13}.ab-c{grid-column:1/8}.ab-r{grid-column:8/13}.abimg{max-width:300px}}
+@media(max-width:820px){
+ .stage{height:clamp(480px,72vh,600px)}.sd{display:none}.ph-c{height:72%}.fr{width:62vw}
+ .top span:last-child{display:none}
+ .ab-c,.ab-r,.ab-l{grid-column:1/13}
+ .tl .d,.tl .t{grid-column:1/13}.sk{grid-template-columns:repeat(2,1fr)}
+ .pj{grid-column:1/13!important}.ac{grid-template-columns:64px 1fr}.ac .btn{grid-column:2;justify-self:start}
+ .ct{grid-template-columns:1fr 1fr}.act{grid-template-columns:1fr 1fr}.act figure:nth-child(2){margin-top:0}
+ footer{padding-bottom:64px}
+}
+@media(max-width:560px){.c3,.sk{grid-template-columns:1fr}.act{grid-template-columns:1fr}.ct{grid-template-columns:1fr}.nm{font-size:clamp(36px,12vw,52px)}.rl{top:calc(9% + 12vw)}.bot .mut{display:none}.logo{font-size:16px}.lang button{padding:5px 7px}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header><div class="wrap">
+ <a class="logo" href="#hero" data-i18n-attr="aria-label:logoAria">Dwi Amelia</a>
+ <nav data-i18n-attr="aria-label:navAria">
+  <ul id="menu">
+   <li><a href="#about">01 <span data-i18n="navAbout"></span></a></li>
+   <li><a href="#education">02 <span data-i18n="navEducation"></span></a></li>
+   <li><a href="#skills">03 <span data-i18n="navSkills"></span></a></li>
+   <li><a href="#projects">04 <span data-i18n="navProjects"></span></a></li>
+   <li><a href="#experience">05 <span data-i18n="navExperience"></span></a></li>
+   <li><a href="#achievements">06 <span data-i18n="navAchievements"></span></a></li>
+   <li><a href="#certificates">07 <span data-i18n="navCertificates"></span></a></li>
+   <li><a href="#contact">08 <span data-i18n="navContact"></span></a></li>
+  </ul>
+ </nav>
+ <div class="rt">
+  <!-- LANGUAGE SWITCHER -->
+  <div class="lang" role="group" data-i18n-attr="aria-label:langAria">
+   <button type="button" data-lang="id" aria-pressed="true" lang="id">ID</button>
+   <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+  </div>
+  <button id="tg" aria-expanded="false" aria-controls="menu" data-i18n="menuBtn" data-i18n-attr="aria-label:menuAria"></button>
+ </div>
+</div></header>
+
+<main>
+<!-- HERO -->
+<section id="hero"><div class="wrap">
+ <div class="stage">
+  <div class="top meta"><span data-i18n="heroTop1"></span><span data-i18n="heroTop2"></span></div>
+  <div style="position:relative">
+   <h1 class="nm">Dwi Amelia</h1>
+   <p class="rl" data-i18n="heroRole"></p>
+   <div class="fr"></div>
+   <!-- FOTO: ganti assets/images/profile.png -->
+   <div class="ph-c"><img src="assets/images/profile.png" data-i18n-attr="alt:profileAlt" onerror="this.parentNode.classList.add('noimg')"></div>
+   <div class="sd l"><b data-i18n="heroPosLbl"></b><span data-i18n="heroPos"></span></div>
+   <div class="sd r"><b data-i18n="lblFocus"></b><span data-i18n="heroFocus"></span></div>
+  </div>
+  <div class="bot"><span class="mut">Universitas Teknokrat Indonesia</span><span><a class="btn f" href="#projects" data-i18n="heroCta1"></a> <a class="btn" href="#about" data-i18n="heroCta2"></a></span></div>
+ </div>
+</div></section>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap">
+ <div class="head rv"><h2 data-i18n="aboutTitle"></h2><span class="meta">01 / <span data-i18n="navAbout"></span></span></div>
+ <div class="g rv">
+  <div class="ab-l"><div class="abimg ph"><img src="assets/images/about.png" data-i18n-attr="alt:aboutImgAlt" loading="lazy" onerror="this.parentNode.classList.add('miss')"></div></div>
+  <div class="ab-c">
+   <p class="lead" data-i18n="aboutLead"></p>
+   <p data-i18n="aboutP"></p>
+  </div>
+  <div class="ab-r kv">
+   <div><span class="meta" data-i18n="lblEdu"></span><p data-i18n="valEdu"></p></div>
+   <div><span class="meta" data-i18n="lblFocus"></span><p data-i18n="valFocus"></p></div>
+   <div><span class="meta" data-i18n="lblInterests"></span><p data-i18n="valInterests"></p></div>
+   <div><span class="meta" data-i18n="lblLocation"></span><p data-i18n="phInfo"></p></div>
+  </div>
+ </div>
+ <!-- EDUCATION -->
+ <div id="education" style="margin-top:clamp(36px,5vw,64px)" class="rv">
+  <p class="meta" style="margin-bottom:10px">02 / <span data-i18n="eduTitle"></span></p>
+  <ul class="tl">
+   <li><span class="d meta" data-i18n="eduNow"></span><div class="t"><h3 data-i18n="eduDeg"></h3><span class="mut">Universitas Teknokrat Indonesia</span><p data-i18n="eduDesc"></p></div></li>
+   <li><span class="d meta">2021 — 2024</span><div class="t"><h3>SMA Negeri 1 Bandar Negeri Suoh</h3><span class="mut" data-i18n="eduSma"></span></div></li>
+  </ul>
+ </div>
+</div></section>
+
+<!-- SKILLS -->
+<section id="skills" class="beige"><div class="wrap">
+ <div class="head rv"><h2 data-i18n="skillsTitle"></h2><span class="meta">03 / <span data-i18n="navSkills"></span></span></div>
+ <div class="sk rv">
+  <div><span class="meta">A</span><h3 data-i18n="skDev"></h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>WordPress</li><li>Node.js</li><li>Express.js</li><li>Flutter</li><li>REST API</li></ul></div>
+  <div><span class="meta">B</span><h3>UI/UX</h3><ul><li>UI/UX Design</li><li>Figma</li><li>Wireframing</li><li>Prototyping</li><li>Google Stitch</li></ul></div>
+  <div class="hl"><span class="meta" data-i18n="skSupport"></span><h3 data-i18n="skGfx"></h3><ul><li>Adobe Illustrator</li><li>CorelDRAW</li><li>Adobe Photoshop</li><li data-i18n="skCreative"></li><li data-i18n="skContent"></li></ul></div>
+  <div><span class="meta">D</span><h3 data-i18n="skTools"></h3><ul><li>Visual Studio Code</li><li>Git</li><li>GitHub</li><li data-i18n="skVideo"></li></ul></div>
+  <div><span class="meta">E</span><h3>Database</h3><ul><li>MariaDB</li></ul></div>
+ </div>
+</div></section>
+
+<!-- PROJECTS -->
+<section id="projects"><div class="wrap">
+ <div class="head rv"><h2 data-i18n="projTitle"></h2><span class="meta">04 / <span data-i18n="navProjects"></span></span></div>
+ <div class="g" id="pjBox"></div>
+</div></section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="dark"><div class="wrap">
+ <div class="head rv"><h2 data-i18n="expTitle"></h2><span class="meta">05 / <span data-i18n="navExperience"></span></span></div>
+ <ul class="tl rv">
+  <li><span class="d meta"><span data-i18n="lblOrg"></span>: UKM Robotik</span><div class="t"><span class="meta" data-i18n="lblRole"></span><h3 data-i18n="e1role"></h3><span class="mut">UKM Robotik Universitas Teknokrat Indonesia · <span data-i18n="lblPeriod"></span>: <span data-i18n="phPeriod"></span></span><p data-i18n="e1desc"></p></div></li>
+  <li><span class="d meta"><span data-i18n="lblOrg"></span>: UKM Robotik</span><div class="t"><span class="meta" data-i18n="lblRole"></span><h3 data-i18n="e2role"></h3><span class="mut">UKM Robotik Universitas Teknokrat Indonesia · <span data-i18n="lblPeriod"></span>: <span data-i18n="phPeriod"></span></span><p data-i18n="e2desc"></p></div></li>
+  <li><span class="d meta"><span data-i18n="lblOrg"></span>: HIMA Informatika</span><div class="t"><span class="meta" data-i18n="lblRole"></span><h3 data-i18n="e3role"></h3><span class="mut">Himpunan Mahasiswa Informatika Universitas Teknokrat Indonesia · <span data-i18n="lblPeriod"></span>: <span data-i18n="phPeriod"></span></span><p data-i18n="e3desc"></p></div></li>
+ </ul>
+</div></section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="deep"><div class="wrap">
+ <div class="head rv"><h2 data-i18n="achTitle"></h2><span class="meta">06 / <span data-i18n="navAchievements"></span></span></div>
+ <div class="rv">
+  <div class="ac"><div class="n">03</div><div><span class="meta"><span data-i18n="place3"></span> · 2026</span><h3>Lomba Desain UI/UX Nasional KAIDAS 2026</h3><p data-i18n="ach1desc"></p></div><a class="btn" href="#certificates" data-i18n="btnViewCert"></a></div>
+  <div class="ac"><div class="n">★</div><div><span class="meta"><span data-i18n="awardLbl"></span> · 2026</span><h3>Mahasiswa Berprestasi 2026</h3><p data-i18n="ach2desc"></p></div><a class="btn" href="#certificates" data-i18n="btnViewCert"></a></div>
+ </div>
+</div></section>
+
+<!-- CERTIFICATES -->
+<section id="certificates"><div class="wrap">
+ <div class="head rv"><h2 data-i18n="certTitle"></h2><span class="meta">07 / <span data-i18n="navCertificates"></span></span></div>
+ <div class="c3" id="ceBox"></div>
+</div></section>
+
+<!-- ACTIVITIES -->
+<section id="activities" class="beige"><div class="wrap">
+ <div class="head rv"><h2 data-i18n="actTitle"></h2><span class="meta" data-i18n="actMeta"></span></div>
+ <div class="c3 act">
+  <figure class="rv"><div class="ph"><img src="assets/images/activity-01.jpg" data-i18n-attr="alt:actAlt1" loading="lazy" onerror="this.parentNode.classList.add('miss')"></div><figcaption class="mut">01 · <span data-i18n="phInfo"></span></figcaption></figure>
+  <figure class="rv"><div class="ph"><img src="assets/images/activity-02.jpg" data-i18n-attr="alt:actAlt2" loading="lazy" onerror="this.parentNode.classList.add('miss')"></div><figcaption class="mut">02 · <span data-i18n="phInfo"></span></figcaption></figure>
+  <figure class="rv"><div class="ph"><img src="assets/images/activity-03.jpg" data-i18n-attr="alt:actAlt3" loading="lazy" onerror="this.parentNode.classList.add('miss')"></div><figcaption class="mut">03 · <span data-i18n="phInfo"></span></figcaption></figure>
+ </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact" class="dark"><div class="wrap">
+ <div class="head rv"><h2 data-i18n="contactTitle"></h2><span class="meta">08 / <span data-i18n="navContact"></span></span></div>
+ <p class="cta rv" data-i18n="cta"></p>
+ <div class="ct rv">
+  <a href="mailto:[ADD YOUR EMAIL]">Email<br><span class="mut" data-i18n="phEmail"></span></a>
+  <a href="[ADD YOUR LINK]" target="_blank" rel="noopener noreferrer">GitHub<br><span class="mut" data-i18n="phLink"></span></a>
+  <a href="[ADD YOUR LINK]" target="_blank" rel="noopener noreferrer">LinkedIn<br><span class="mut" data-i18n="phLink"></span></a>
+  <a href="[ADD YOUR LINK]" target="_blank" rel="noopener noreferrer">Instagram<br><span class="mut" data-i18n="phLink"></span></a>
+ </div>
+ <p style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn f" href="mailto:[ADD YOUR EMAIL]" data-i18n="btnEmail"></a> <a class="btn" href="assets/documents/cv.pdf" download data-i18n="btnCv"></a></p>
+</div></section>
+</main>
+
+<!-- MUSIC -->
+<!-- Replace this file: assets/music/portfolio-music.mp3 with your own MP3 file. -->
+<audio id="bgm" loop preload="none"><source src="assets/music/portfolio-music.mp3" type="audio/mpeg"></audio>
+<button id="mu" aria-pressed="false" type="button"></button>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+ <div><b>Dwi Amelia</b><p class="meta" style="margin-top:4px" data-i18n="footBuilt"></p></div>
+ <p class="mut">© <span id="yr">2026</span> Dwi Amelia</p>
+</div></footer>
+
+<!-- LIGHTBOX -->
+<div id="lb" role="dialog" aria-modal="true" data-i18n-attr="aria-label:lbAria">
+ <button class="btn x" id="lbx" type="button" data-i18n="lbClose"></button>
+ <figure><img id="lbi" alt=""><div id="lbm" class="meta" data-i18n="soonTxt"></div><figcaption id="lbc" style="margin-top:10px;font:600 18px var(--serif)"></figcaption>
+  <div class="nv"><button class="btn" id="lbp" type="button" data-i18n="lbPrev"></button><button class="btn" id="lbn" type="button" data-i18n="lbNext"></button></div>
+ </figure>
+</div>
+
+<script>
+// ============================================================
+// TRANSLATION DATA — edit teks UI di sini. Nama teknologi,
+// universitas, organisasi, dan kompetisi tidak diterjemahkan.
+// ============================================================
+const translations = {
+// ================================
+// INDONESIAN TRANSLATIONS
+// ================================
+id: {
+ docTitle:"Dwi Amelia — Portfolio Informatika",
+ docDesc:"Portfolio Dwi Amelia, mahasiswa S1 Informatika Universitas Teknokrat Indonesia: pengembangan web, UI/UX, produk digital, desain kreatif, sertifikat, dan prestasi.",
+ soonTxt:"GAMBAR SEGERA HADIR", addImg:"[TAMBAH FOTO ANDA]",
+ logoAria:"Ke bagian atas", navAria:"Navigasi utama", langAria:"Pilih bahasa", menuBtn:"MENU", menuAria:"Buka menu navigasi",
+ navAbout:"Tentang", navEducation:"Pendidikan", navSkills:"Keahlian", navProjects:"Proyek", navExperience:"Pengalaman", navAchievements:"Prestasi", navCertificates:"Sertifikasi", navContact:"Kontak",
+ heroTop1:"Portfolio 2026", heroTop2:"Informatika × Web × UI/UX", heroRole:"Mahasiswa Informatika", profileAlt:"Foto Dwi Amelia",
+ heroPosLbl:"Profil", heroPos:"Mahasiswa S1 Informatika yang memadukan teknologi, desain, dan kebutuhan pengguna.",
+ heroFocus:"Pengembangan Web · UI/UX · Produk Digital · Desain Visual", heroCta1:"Lihat Proyek", heroCta2:"Tentang Saya",
+ aboutTitle:"Tentang Saya", aboutImgAlt:"Foto Dwi Amelia",
+ aboutLead:"Saya mahasiswa Informatika yang memiliki ketertarikan pada pengembangan web, UI/UX, produk digital, dan desain visual.",
+ aboutP:"Saya aktif membangun website, aplikasi mobile, sistem informasi, dan konsep produk digital berbasis kebutuhan pengguna. Kegiatan organisasi melatih saya dalam kerja sama tim, kepemimpinan, komunikasi, dan pemecahan masalah.",
+ lblEdu:"Pendidikan", lblFocus:"Fokus", lblInterests:"Minat", lblLocation:"Lokasi",
+ valEdu:"S1 Informatika, Universitas Teknokrat Indonesia", valFocus:"Pengembangan Web, UI/UX, Produk Digital, Smart City",
+ valInterests:"Teknologi, Aplikasi Mobile, Pemecahan Masalah, Traveling, Mendaki Gunung",
+ phInfo:"[ISI INFORMASI ANDA]", phLink:"[ISI LINK ANDA]", phEmail:"[ISI EMAIL ANDA]", phPeriod:"[ISI PERIODE]", phYear:"[ISI TAHUN]",
+ eduTitle:"Pendidikan", eduNow:"Mahasiswa aktif", eduDeg:"S1 Informatika",
+ eduDesc:"Mempelajari pengembangan perangkat lunak, pemrograman, basis data, struktur data, sistem operasi, analisis dan pemodelan perangkat lunak, serta grafika komputer.",
+ eduSma:"Sekolah Menengah Atas",
+ skillsTitle:"Keahlian", skDev:"Pengembangan", skGfx:"Desain Grafis", skSupport:"Pendukung", skTools:"Alat & Teknologi",
+ skCreative:"Desain Digital Kreatif", skContent:"Desain Konten Digital", skVideo:"Dasar Penyuntingan Video",
+ projTitle:"Proyek <i>Pilihan</i>", lkView:"Lihat Proyek", lkGithub:"GitHub", lkDemo:"Demo Langsung", lkFigma:"Figma", lkDocs:"Dokumentasi",
+ lkEmpty:"Link belum diisi", openProj:"Buka proyek",
+ expTitle:"Pengalaman", lblOrg:"Organisasi", lblRole:"Peran", lblPeriod:"Periode",
+ e1role:"Ketua Divisi Racing Plane", e1desc:"Mengoordinasikan anggota, mengatur kegiatan divisi, membangun kerja sama tim, serta mengembangkan kemampuan memecahkan masalah di bidang robotika dan aeromodelling.",
+ e2role:"Sekretaris UKM", e2desc:"Mengelola administrasi, dokumen resmi dan surat-menyurat, notulensi kegiatan, serta komunikasi internal pengurus.",
+ e3role:"Staf Kaderisasi, Divisi Sumber Daya Manusia (SDM)", e3desc:"Merencanakan dan melaksanakan program pembinaan, pengembangan potensi mahasiswa, serta perkaderan anggota baru.",
+ achTitle:"Prestasi", place3:"Juara 3", awardLbl:"Penghargaan",
+ ach1desc:"Universitas Negeri Semarang. Solusi digital berbasis SDGs melalui riset, user experience, arsitektur informasi, dan desain visual. Tim Krakatau UX: Dwi Amelia, Haryanti, M. Irfan Pasya. Pembimbing: Angga Bayu Santoso, M.Kom",
+ ach2desc:"Penghargaan resmi. Sertifikatnya tersedia di bagian Sertifikasi.", btnViewCert:"Lihat Sertifikat",
+ certTitle:"Sertifikasi", viewCert:"Lihat sertifikat",
+ cat_Certification:"Sertifikasi", cat_Achievement:"Prestasi", cat_Training:"Pelatihan", cat_Workshop:"Workshop", cat_Seminar:"Seminar", cat_Volunteer:"Relawan",
+ actTitle:"Kegiatan <i>Terbaru</i>", actMeta:"Dokumentasi", actAlt1:"Dokumentasi kegiatan 1", actAlt2:"Dokumentasi kegiatan 2", actAlt3:"Dokumentasi kegiatan 3",
+ contactTitle:"Kontak", cta:"Mari <i>terhubung.</i>", btnEmail:"Kirim Email", btnCv:"Unduh CV",
+ musicOff:"♫ Musik mati", musicOn:"♫ Musik nyala", musicPlayAria:"Putar musik latar", musicPauseAria:"Jeda musik latar", musicMissing:"♫ File musik belum ada",
+ footBuilt:"Dibuat dengan kode & desain",
+ lbAria:"Pratinjau sertifikat", lbClose:"Tutup", lbPrev:"Sebelumnya", lbNext:"Berikutnya"
+},
+// ================================
+// ENGLISH TRANSLATIONS
+// ================================
+en: {
+ docTitle:"Dwi Amelia — Informatics Portfolio",
+ docDesc:"Portfolio of Dwi Amelia, a Bachelor of Informatics student at Universitas Teknokrat Indonesia: web development, UI/UX, digital products, creative design, certifications, and achievements.",
+ soonTxt:"IMAGE COMING SOON", addImg:"[ADD YOUR IMAGE]",
+ logoAria:"Back to top", navAria:"Main navigation", langAria:"Choose language", menuBtn:"MENU", menuAria:"Open navigation menu",
+ navAbout:"About", navEducation:"Education", navSkills:"Skills", navProjects:"Projects", navExperience:"Experience", navAchievements:"Achievements", navCertificates:"Certifications", navContact:"Contact",
+ heroTop1:"Portfolio 2026", heroTop2:"Informatics × Web × UI/UX", heroRole:"Informatics Student", profileAlt:"Photo of Dwi Amelia",
+ heroPosLbl:"Profile", heroPos:"Informatics undergraduate combining technology, design, and user needs.",
+ heroFocus:"Web Development · UI/UX · Digital Product · Visual Design", heroCta1:"View Projects", heroCta2:"About Me",
+ aboutTitle:"About Me", aboutImgAlt:"Photo of Dwi Amelia",
+ aboutLead:"I am an Informatics student interested in web development, UI/UX, digital products, and visual design.",
+ aboutP:"I actively build websites, mobile apps, information systems, and digital product concepts grounded in user needs. Organizational work has strengthened my teamwork, leadership, communication, and problem solving.",
+ lblEdu:"Education", lblFocus:"Focus", lblInterests:"Interests", lblLocation:"Location",
+ valEdu:"Bachelor of Informatics, Universitas Teknokrat Indonesia", valFocus:"Web Development, UI/UX, Digital Product, Smart City",
+ valInterests:"Technology, Mobile Applications, Problem Solving, Traveling, Mountain Hiking",
+ phInfo:"[ADD YOUR INFORMATION]", phLink:"[ADD YOUR LINK]", phEmail:"[ADD YOUR EMAIL]", phPeriod:"[ADD PERIOD]", phYear:"[ADD YEAR]",
+ eduTitle:"Education", eduNow:"Current student", eduDeg:"Bachelor of Informatics",
+ eduDesc:"Studying software development, programming, databases, data structures, operating systems, software analysis and modeling, and computer graphics.",
+ eduSma:"Senior High School",
+ skillsTitle:"Skills", skDev:"Development", skGfx:"Graphic Design", skSupport:"Supporting", skTools:"Tools & Technology",
+ skCreative:"Creative Digital Design", skContent:"Digital Content Design", skVideo:"Basic Video Editing",
+ projTitle:"Selected <i>Projects</i>", lkView:"View Project", lkGithub:"GitHub", lkDemo:"Live Demo", lkFigma:"Figma", lkDocs:"Documentation",
+ lkEmpty:"Link not set yet", openProj:"Open project",
+ expTitle:"Experience", lblOrg:"Organization", lblRole:"Role", lblPeriod:"Period",
+ e1role:"Head of Racing Plane Division", e1desc:"Coordinated members, organized division activities, built teamwork, and developed problem-solving skills in robotics and aeromodelling.",
+ e2role:"Secretary", e2desc:"Managed administration, official documents and correspondence, meeting minutes, and internal communication among the board.",
+ e3role:"Cadre Development Staff, Human Resources Division", e3desc:"Planned and ran mentoring programs, student potential development, and the onboarding of new members.",
+ achTitle:"Achievements", place3:"3rd Place", awardLbl:"Award",
+ ach1desc:"Universitas Negeri Semarang. An SDG-based digital solution built through research, user experience, information architecture, and visual design. Team Krakatau UX: Dwi Amelia, Haryanti, M. Irfan Pasya. Supervisor: Angga Bayu Santoso, M.Kom",
+ ach2desc:"Official award. The certificate is available in the Certifications section.", btnViewCert:"View Certificate",
+ certTitle:"Certifications", viewCert:"View certificate",
+ cat_Certification:"Certification", cat_Achievement:"Achievement", cat_Training:"Training", cat_Workshop:"Workshop", cat_Seminar:"Seminar", cat_Volunteer:"Volunteer",
+ actTitle:"Recent <i>Activities</i>", actMeta:"Documentation", actAlt1:"Activity documentation 1", actAlt2:"Activity documentation 2", actAlt3:"Activity documentation 3",
+ contactTitle:"Contact", cta:"Let's <i>connect.</i>", btnEmail:"Send Email", btnCv:"Download CV",
+ musicOff:"♫ Music off", musicOn:"♫ Music on", musicPlayAria:"Play background music", musicPauseAria:"Pause background music", musicMissing:"♫ Music file missing",
+ footBuilt:"Built with code & design",
+ lbAria:"Certificate preview", lbClose:"Close", lbPrev:"Previous", lbNext:"Next"
+}
+};
+
+// ============================================================
+// PROJECT DATA — description_id / description_en per project.
+// view = link utama ("#" = belum diisi). github/demo/figma/docs
+// hanya tampil jika diisi. year: isi mis. "2025".
+// ============================================================
+const projects=[
+ {title:"Wayescape",img:"wayescape",cat:{id:"Mobile · Pariwisata",en:"Mobile · Tourism"},year:"",
+  description_id:"Konsep aplikasi mobile pariwisata untuk menemukan destinasi wisata di Way Kanan, Lampung: informasi destinasi, galeri, peta, favorit, ulasan, dan sistem backend.",
+  description_en:"A mobile tourism app concept for discovering destinations in Way Kanan, Lampung, with destination info, gallery, maps, favorites, reviews, and a backend system.",
+  tools:["Flutter","Node.js","Express.js","MariaDB","Google Maps API"],view:"#",github:"",demo:"",figma:"",docs:""},
+ {title:"Cheesholic",img:"cheesholic",cat:{id:"UI/UX · UMKM",en:"UI/UX · Small Business"},year:"",
+  description_id:"Desain UI/UX aplikasi mobile UMKM Cheesholic: pemesanan produk yang mudah, katalog menarik, dan alur transaksi yang cepat.",
+  description_en:"UI/UX design for the Cheesholic small-business mobile app: easy product ordering, an appealing catalog, and a fast checkout flow.",
+  tools:["Figma","UI/UX","Wireframing","Prototyping"],view:"#",github:"",demo:"",figma:"",docs:""},
+ {title:"TerraEye",img:"terraeye",cat:{id:"UI/UX · Smart City",en:"UI/UX · Smart City"},year:"",
+  description_id:"Konsep solusi digital untuk pelaporan dan pemantauan masalah lingkungan serta tindak lanjutnya.",
+  description_en:"A digital solution concept for reporting and monitoring environmental issues and their follow-up.",
+  tools:["Smart City","SDGs","UI/UX Research"],view:"#",github:"",demo:"",figma:"",docs:""},
+ {title:"Sahabat Remaja",img:"sahabat-remaja",cat:{id:"Web · Chatbot",en:"Web · Chatbot"},year:"",
+  description_id:"Aplikasi web chatbot konsultasi untuk remaja dengan respons percakapan otomatis.",
+  description_en:"A consultation chatbot web app for teenagers with automated conversational responses.",
+  tools:["Web","Chatbot","HTML/CSS","JavaScript"],view:"#",github:"",demo:"",figma:"",docs:""},
+ {title:"NUSA",img:"nusa",cat:{id:"Produk Digital · UMKM",en:"Digital Product · Small Business"},year:"",
+  description_id:"Konsep aplikasi pencatatan transaksi dan pengelolaan usaha UMKM dalam satu sistem.",
+  description_en:"An app concept for recording transactions and managing small businesses in a single system.",
+  tools:["NScan","NVoice","NSell","PDF Report"],view:"#",github:"",demo:"",figma:"",docs:""},
+ {title:"RAM Simulation",img:"ram-simulation",cat:{id:"Web · Edukasi",en:"Web · Educational"},year:"",
+  description_id:"Simulasi interaktif yang memvisualisasikan cara kerja RAM pada sistem komputer.",
+  description_en:"An interactive simulation that visualizes how RAM works in a computer system.",
+  tools:["HTML5","CSS3","JavaScript"],view:"#",github:"",demo:"",figma:"",docs:""},
+ {title:"Personal Portfolio",img:"portfolio",cat:{id:"Web · Personal Branding",en:"Web · Personal Branding"},year:"",
+  description_id:"Website portfolio pribadi yang memuat profil, pendidikan, organisasi, keahlian, sertifikasi, proyek, dan prestasi.",
+  description_en:"A personal portfolio website covering profile, education, organizations, skills, certifications, projects, and achievements.",
+  tools:["HTML5","CSS","JavaScript"],view:"#",github:"",demo:"",figma:"",docs:""}
+];
+const spans=[7,5,4,4,4,5,7];
+
+// DATA SERTIFIKAT — file: certificate-01.jpg dst. (nama resmi tidak diterjemahkan)
+const certs=[
+ {cat:"Certification",id:"Sertifikat Keahlian",en:"Skills Certificate"},
+ {cat:"Achievement",id:"Juara 3 — KAIDAS 2026",en:"3rd Place — KAIDAS 2026"},
+ {cat:"Training",id:"Pelatihan Microsoft Word",en:"Microsoft Word Training"},
+ {cat:"Training",id:"Pelatihan Microsoft Excel",en:"Microsoft Excel Training"},
+ {cat:"Training",id:"Pelatihan Microsoft PowerPoint",en:"Microsoft PowerPoint Training"},
+ {cat:"Workshop",id:"Workshop Mindbloom",en:"Mindbloom Workshop"},
+ {cat:"Achievement",id:"Mahasiswa Berprestasi 2026",en:"Mahasiswa Berprestasi 2026"},
+ {cat:"Training",id:"Pelatihan Portofolio Web Instan (GSA)",en:"Instant Web Portfolio Training (GSA)"},
+ {cat:"Seminar",id:"Seminar Automation UiPath x IOH",en:"Automation Seminar: UiPath x IOH"},
+ {cat:"Volunteer",id:"Sertifikat Volunteer",en:"Volunteer Certificate"}
+];
+
+// ============================================================
+// LANGUAGE ENGINE
+// ============================================================
+const $=s=>document.querySelector(s),pad=n=>String(n).padStart(2,'0');
+let lang='id';
+try{const s=localStorage.getItem('portfolioLanguage');if(s==='id'||s==='en')lang=s}catch(e){}
+const t=k=>translations[lang][k]!==undefined?translations[lang][k]:k;
+const au=$('#bgm'),mu=$('#mu');let musicErr=false;
+const lnk=(u,k,name)=>`<a href="${u}" class="project-link${u==='#'?' empty':''}" target="_blank" rel="noopener noreferrer" aria-label="${t('openProj')}: ${name} — ${t(k)}"${u==='#'?` title="${t('lkEmpty')}"`:''}>${t(k)} ↗</a>`;
+let first=true;
+function renderDyn(){
+ $('#pjBox').innerHTML=projects.map((p,i)=>`<article class="pj${first?' rv':''}" style="grid-column:span ${spans[i]}">
+<div class="ph"><img src="assets/projects/${p.img}.jpg" alt="${p.title}" ${i>1?'loading="lazy"':''} onerror="this.parentNode.classList.add('miss')"></div>
+<div class="mt meta"><span>${pad(i+1)} / ${p.cat[lang]}</span><span style="opacity:.6">${p.year||t('phYear')}</span></div>
+<h3>${p.title}<span aria-hidden="true">↗</span></h3><p>${p['description_'+lang]}</p>
+<div class="tags">${p.tools.map(x=>`<span>${x}</span>`).join('')}</div>
+<div class="lk">${lnk(p.view,'lkView',p.title)}${p.github?lnk(p.github,'lkGithub',p.title):''}${p.demo?lnk(p.demo,'lkDemo',p.title):''}${p.figma?lnk(p.figma,'lkFigma',p.title):''}${p.docs?lnk(p.docs,'lkDocs',p.title):''}</div></article>`).join('');
+ $('#ceBox').innerHTML=certs.map((c,i)=>`<button type="button" class="ce${first?' rv':''}" data-i="${i}" aria-label="${t('viewCert')}: ${c[lang]}"><div class="ph"><img src="assets/certificates/certificate-${pad(i+1)}.jpg" alt="${c[lang]}" loading="lazy" onerror="this.parentNode.classList.add('miss')"></div><span class="meta">${pad(i+1)} · ${t('cat_'+c.cat)} · 2026</span><span class="tt">${c[lang]}</span></button>`).join('');
+ if(first)document.querySelectorAll('#pjBox .rv,#ceBox .rv').forEach(el=>io.observe(el));
+ first=false;
+}
+function musicLabel(){
+ const on=!au.paused;
+ mu.textContent=musicErr?t('musicMissing'):on?t('musicOn'):t('musicOff');
+ mu.setAttribute('aria-pressed',on);mu.setAttribute('aria-label',on?t('musicPauseAria'):t('musicPlayAria'));
+}
+function apply(){
+ document.documentElement.lang=lang;
+ document.title=t('docTitle');
+ document.querySelector('meta[name=description]').content=t('docDesc');
+ document.querySelector('meta[property="og:title"]').content=t('docTitle');
+ document.querySelector('meta[property="og:description"]').content=t('docDesc');
+ document.documentElement.style.setProperty('--soon','"'+t('soonTxt')+'"');
+ document.documentElement.style.setProperty('--addimg','"'+t('addImg')+'"');
+ document.querySelectorAll('[data-i18n]').forEach(el=>el.innerHTML=t(el.dataset.i18n));
+ document.querySelectorAll('[data-i18n-attr]').forEach(el=>el.dataset.i18nAttr.split(';').forEach(p=>{const[a,k]=p.split(':');el.setAttribute(a,t(k))}));
+ document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+ $('#yr').textContent=new Date().getFullYear();
+ renderDyn();musicLabel();
+ if(lb.classList.contains('on'))showCert(cur);
+}
+function setLang(l){
+ if(l===lang)return;
+ const y=window.scrollY;document.body.classList.add('sw');
+ setTimeout(()=>{lang=l;try{localStorage.setItem('portfolioLanguage',l)}catch(e){}apply();window.scrollTo({top:y,behavior:'instant'});document.body.classList.remove('sw')},160);
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+
+// Lightbox
+const lb=$('#lb'),lbi=$('#lbi');let cur=0,last;
+function showCert(i){
+ cur=(i+certs.length)%certs.length;const c=certs[cur];
+ lbi.style.display='';$('#lbm').style.display='none';
+ lbi.onerror=()=>{lbi.style.display='none';$('#lbm').style.display='block'};
+ lbi.src=`assets/certificates/certificate-${pad(cur+1)}.jpg`;lbi.alt=c[lang];$('#lbc').textContent=c[lang];
+}
+document.addEventListener('click',e=>{const b=e.target.closest('.ce');if(!b)return;last=b;showCert(+b.dataset.i);lb.classList.add('on');$('#lbx').focus()});
+const closeLb=()=>{lb.classList.remove('on');last&&last.focus()};
+$('#lbx').onclick=closeLb;$('#lbp').onclick=()=>showCert(cur-1);$('#lbn').onclick=()=>showCert(cur+1);
+lb.onclick=e=>{if(e.target===lb)closeLb()};
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')showCert(cur-1);if(e.key==='ArrowRight')showCert(cur+1)});
+
+// Menu mobile
+const tg=$('#tg'),mn=$('#menu');tg.onclick=()=>{const o=mn.classList.toggle('open');tg.setAttribute('aria-expanded',o)};
+mn.onclick=e=>{if(e.target.closest('a')){mn.classList.remove('open');tg.setAttribute('aria-expanded','false')}};
+
+// Music: tidak autoplay; tetap berjalan saat bahasa diganti
+mu.onclick=()=>{
+ if(au.paused){musicErr=false;au.play().then(musicLabel).catch(()=>{musicErr=true;musicLabel()})}
+ else{au.pause();musicLabel()}
+};
+au.addEventListener('error',()=>{},true);
+
+// Reveal + active nav
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const links=[...document.querySelectorAll('nav a')],tgts=links.map(a=>document.querySelector(a.hash));let tick=false;
+addEventListener('scroll',()=>{if(tick)return;tick=true;requestAnimationFrame(()=>{let a=-1;tgts.forEach((el,i)=>{if(el&&el.getBoundingClientRect().top<=140)a=i});links.forEach((l,i)=>l.classList.toggle('on',i===a));tick=false})},{passive:true});
+
+apply();
+</script>
+</body>
+</html>
